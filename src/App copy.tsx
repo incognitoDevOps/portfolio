@@ -16,8 +16,6 @@ import {
   Calendar,
   MapPin,
   ChevronDown,
-  Eye,
-  GitBranch,
 } from "lucide-react";
 
 function App() {
@@ -31,7 +29,6 @@ function App() {
         "about",
         "experience",
         "skills",
-        "projects",
         "education",
         "contact",
       ];
@@ -70,7 +67,7 @@ function App() {
     { id: "about", label: "About" },
     { id: "experience", label: "Experience" },
     { id: "skills", label: "Skills" },
-    { id: "projects", label: "Projects" },
+    // { id: 'education', label: 'Education' },
     { id: "contact", label: "Contact" },
   ];
 
@@ -237,69 +234,6 @@ function App() {
     },
   ];
 
-  const projects = [
-  {
-    title: "ShopEase Online Store",
-    description:
-      "An end-to-end e-commerce platform built with Next.js and Express. Features product catalog, shopping cart, payment integration, authentication, admin dashboard, and scalable backend architecture.",
-    technologies: ["Next.js", "Node.js", "Express", "MongoDB", "Stripe", "TailwindCSS"],
-    image: "shopease.png",
-    liveUrl: "https://e-store-client-eight.vercel.app/",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    title: "eBuntu Shop (Amazon Clone)",
-    description:
-      "A full-stack e-commerce application inspired by Amazon, featuring secure authentication, role-based dashboards, product management, and order processing. Built with React, Redux, Node.js, and MongoDB. Deployed with a scalable, cloud-native architecture.",
-    technologies: ["React", "Redux", "Node.js", "MongoDB", "Express", "Material UI"],
-    image: "ebuntu.png",
-    liveUrl: "https://ebuntu.vercel.app/",
-    githubUrl: "#",
-    featured: true,
-  },
-  {
-    title: "Modern Trade Market - Web App",
-    description:
-      "A responsive e-commerce web application with multi-role access (Admin, Seller, Client), REST API integration, OAuth login, Redis caching, and CI/CD via Docker and Kubernetes.",
-    technologies: ["React", "Node.js", "Express", "Redis", "Docker", "Kubernetes"],
-    image: "moderntr.png",
-    liveUrl: "https://moderntrademarket.com/",
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    title: "Modern Trade Market - Mobile App",
-    description:
-      "A cross-platform mobile version of the Modern Trade Market e-commerce platform developed using React Native. Includes secure login, product browsing, and in-app transactions.",
-    technologies: ["React Native", "JWT", "Node.js", "REST API"],
-    image: "mobile.jpg",
-    liveUrl: "https://shorturl.at/tHfvv",
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    title: "Action System",
-    description:
-      "A productivity automation system built with Node.js and React.js. Provides task triggers, real-time data sync, and user activity logs to streamline internal operations.",
-    technologies: ["Node.js", "React.js", "MongoDB", "Express", "WebSockets"],
-    image: "auction.png",
-    liveUrl: "https://online-auction-system-frontend-jet.vercel.app/",
-    githubUrl: "#",
-    featured: false,
-  },
-  {
-    title: "Mobile Transaction Tracker",
-    description:
-      "An Android application built with Java to track mobile money transactions from SMS and emails using regex. It parses M-Pesa and bank notifications, then logs them into Microsoft 365 for automated reporting.",
-    technologies: ["Java", "Android SDK", "Regex", "M365 Graph API", "Firebase"],
-    image: "https://images.pexels.com/photos/1619656/pexels-photo-1619656.jpeg?auto=compress&cs=tinysrgb&w=800",
-    liveUrl: "#",
-    githubUrl: "#",
-    featured: true,
-  }
-];
-
   const education = [
     {
       degree: "Bachelor of Science in Computer Science",
@@ -408,10 +342,10 @@ function App() {
                 Get In Touch
               </button>
               <button
-                onClick={() => scrollToSection("projects")}
+                onClick={() => scrollToSection("about")}
                 className="border-2 border-blue-700 text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 hover:text-white transform hover:scale-105 transition-all duration-200"
               >
-                View Projects
+                Learn More
               </button>
             </div>
             <div className="flex justify-center space-x-6">
@@ -449,38 +383,34 @@ function App() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Versatile software engineer with a proven track record in building
-              scalable systems, impactful digital solutions, and
-              cloud-integrated platforms across web, mobile, and DevOps.
+              Passionate software developer with expertise in modern web
+              technologies and a commitment to delivering exceptional user
+              experiences.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-700 leading-relaxed">
-                I’m Brian Otieno Adem — a full-stack developer and DevOps
-                enthusiast passionate about solving real-world problems through
-                technology. With a solid background in computer science and
-                hands-on experience delivering production-grade applications, I
-                specialize in full-cycle development, from front-end interfaces
-                to back-end APIs and cloud deployments.
+                I'm a dedicated full-stack developer with a strong foundation in
+                computer science and hands-on experience building scalable web
+                applications. My journey in technology began during my
+                university years, where I discovered my passion for creating
+                digital solutions that make a real impact.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                I've built and shipped enterprise dashboards, e-commerce
-                platforms, and health-tech systems using modern stacks like
-                React, Next.js, Node.js, Laravel, and cloud-native tools
-                including Docker, Kubernetes, AWS, and Prometheus. Whether
-                collaborating remotely or on-site, I thrive in dynamic teams and
-                adapt quickly to new technologies and business domains.
+                With expertise spanning frontend frameworks like React and
+                Vue.js to backend technologies including Node.js and Python, I
+                bring a comprehensive approach to software development. I'm
+                particularly interested in emerging technologies and
+                continuously expanding my skill set.
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  "Cloud-Native Solutions",
-                  "Cross-Platform Apps",
-                  "API Design",
-                  "Continuous Integration",
-                  "Agile Collaboration",
-                  "Data Visualization",
+                  "Problem Solving",
+                  "Team Collaboration",
+                  "Continuous Learning",
+                  "Innovation",
                 ].map((trait) => (
                   <span
                     key={trait}
@@ -491,7 +421,6 @@ function App() {
                 ))}
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-blue-50 to-emerald-50 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Quick Facts
@@ -504,20 +433,16 @@ function App() {
                 <div className="flex items-center">
                   <Award className="w-5 h-5 text-blue-700 mr-3" />
                   <span className="text-gray-700">
-                    BSc. in Computer Science
+                    Computer Science Graduate
                   </span>
                 </div>
                 <div className="flex items-center">
                   <Code className="w-5 h-5 text-blue-700 mr-3" />
-                  <span className="text-gray-700">
-                    3+ Years in Production Projects
-                  </span>
+                  <span className="text-gray-700">3+ Years Experience</span>
                 </div>
                 <div className="flex items-center">
                   <Globe className="w-5 h-5 text-blue-700 mr-3" />
-                  <span className="text-gray-700">
-                    Full-Stack | DevOps | Mobile
-                  </span>
+                  <span className="text-gray-700">Full-Stack Developer</span>
                 </div>
               </div>
             </div>
@@ -628,104 +553,8 @@ function App() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A showcase of my recent work and technical expertise across
-              various domains.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col"
-              >
-                <div className="relative">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-52 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  {project.featured && (
-                    <span className="absolute top-3 left-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium shadow">
-                      Featured
-                    </span>
-                  )}
-                </div>
-
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="flex space-x-4 mt-auto">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-blue-700 hover:text-blue-800 text-sm font-medium"
-                      >
-                        <Eye className="w-4 h-4 mr-2" />
-                        Live Demo
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-gray-600 hover:text-gray-800 text-sm font-medium"
-                      >
-                        <GitBranch className="w-4 h-4 mr-2" />
-                        Source Code
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <a
-              href="https://github.com/incognitoDevOps"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-transform transform hover:scale-105 shadow-md"
-            >
-              <Github className="w-5 h-5 mr-2" />
-              View More on GitHub
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Education Section */}
-      {/* <section id="education" className="py-20 bg-white">
+      {/* <section id="education" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Education</h2>
@@ -736,18 +565,11 @@ function App() {
 
           <div className="space-y-8 max-w-4xl mx-auto">
             {education.map((edu, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8"
-              >
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      {edu.degree}
-                    </h3>
-                    <p className="text-xl text-blue-700 font-semibold">
-                      {edu.school}
-                    </p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{edu.degree}</h3>
+                    <p className="text-xl text-blue-700 font-semibold">{edu.school}</p>
                   </div>
                   <div className="mt-2 md:mt-0">
                     <div className="flex items-center text-gray-600">
@@ -756,9 +578,7 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <p className="text-gray-700 leading-relaxed">
-                  {edu.description}
-                </p>
+                <p className="text-gray-700 leading-relaxed">{edu.description}</p>
               </div>
             ))}
           </div>
