@@ -262,7 +262,7 @@ function App() {
     title: "Modern Trade Market - Web App",
     description:
       "A responsive e-commerce web application with multi-role access (Admin, Seller, Client), REST API integration, OAuth login, Redis caching, and CI/CD via Docker and Kubernetes.",
-    technologies: ["React", "Node.js", "Express", "Redis", "Docker", "Kubernetes"],
+    technologies: ["Django", "AWS", "Redis", "Docker", "Kubernetes", "Git Actions", "Mysql", "Linode", "Prometheus", "Grafana"],
     image: "moderntr.png",
     liveUrl: "https://moderntrademarket.com/",
     githubUrl: "#",
