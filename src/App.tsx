@@ -271,8 +271,8 @@ function App() {
   {
     title: "Modern Trade Market - Mobile App",
     description:
-      "A cross-platform mobile version of the Modern Trade Market e-commerce platform developed using React Native. Includes secure login, product browsing, and in-app transactions.",
-    technologies: ["React Native", "JWT", "Node.js", "REST API"],
+      "A cross-platform mobile version of the Modern Trade Market e-commerce platform developed using Flutter. Includes secure login, product browsing, and in-app transactions.",
+    technologies: ["Flutter", "JWT", "Django", "REST API"],
     image: "mobile.jpg",
     liveUrl: "https://shorturl.at/tHfvv",
     githubUrl: "#",
